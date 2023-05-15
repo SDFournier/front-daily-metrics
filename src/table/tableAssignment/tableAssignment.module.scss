@@ -1,0 +1,178 @@
+:root {
+    --colorAssignment: #118bee;
+    --hover-brightness: 1.2;
+}
+
+.containerAssignment {
+    padding: 10px;
+    width: 50%;
+}
+.tableAssignment{
+    /*border:rgb(116, 116, 116) 1.2px solid;*/
+    border-radius: 5px;
+    background-color:  rgb(42, 50, 63);
+
+    padding: 10px;
+}
+.tableColumnHeader{
+    padding-left: 1em;
+    position: relative;
+    cursor: pointer;
+    border: rgb(124, 123, 123) 1px solid ;
+    
+}
+.tableColumnHeader:hover, .tableColumnHeader:active {
+    border: 1px solid rgb(19, 105, 232);
+    Outline: none;
+    color: rgb(19, 105, 232);
+}
+.tableColumnHeader:focus:not(:active):not(:hover)  {
+    border: rgb(124, 123, 123) 1px solid ;
+    Outline: none;
+}
+tr {
+    background-color: transparent;
+    border: transparent;
+    border-radius: 5px!important;
+}
+td {
+    border: 1px solid rgb(94, 93, 93);
+}
+td:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+ 
+}
+td:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+.assignment {
+    line-height: 1.2rem;
+    /*border: rgb(41, 41, 41) 2px solid;*/
+    border-radius: 10px;
+    background-color: blue;
+
+    color: white;
+    font-weight: 600;
+
+    /*
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+    */
+
+}
+
+.tableColumnIndex{
+    filter: brightness(0.65);
+padding-right: 10px;
+padding-left: 10px;
+}
+
+.tableColumnName{
+    filter: brightness(0.85);
+    padding: 10px;
+}
+
+.buttonAdd {
+    height: 1.2em;
+    width: 1.2em;
+    padding: 0em 0em 0em 0em;
+    right: 0.5em;
+    top: 0.2em;
+    position: absolute;
+    background: transparent;
+    border: rgb(124, 123, 123) 1px solid ;
+}
+.buttonAdd:hover, .buttonAdd:active {
+    border: 1px solid rgb(19, 105, 232);
+    Outline: none;
+}
+.buttonAdd:focus:not(:active):not(:hover)  {
+    border: rgb(124, 123, 123) 1px solid ;
+    Outline: none;
+}
+.addIcon {
+    color: rgb(124, 123, 123);
+    font-size: 1em;
+}
+
+.addIcon:hover {
+    color: rgb(19, 105, 232);
+
+}
+
+
+
+/*NEW ASSIGNEMNT ROW */
+
+.tableColumnNewAssignmentInactive {
+    position: absolute;
+    top: 85px;
+    z-index: 1;
+    background-color: rgb(61, 72, 87);
+    width: inherit;
+    /*-shadow: 2px 5px 5px 3px rgba(24, 23, 23, 0.15);*/
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.32);
+
+    border: 2px solid rgb(61, 72, 87);
+    transform-origin: top center;
+    opacity: 0;
+    transform: scale(0.1);
+    transition: opacity 10s ease-in, transform 10s ease-out;
+}
+.tableColumnNewAssignmentActive {
+    @extend .tableColumnNewAssignmentInactive;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.tableColumnNewAssignmentActive:after {
+    content: '';
+    position: absolute;
+    top: -10px; /* adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgb(61, 72, 87); /* change color as needed */
+  }
+
+  .descriptionInput {
+    height: 60px;
+    
+
+  }
+  textarea:focus, textarea:active, input:active, input:focus {
+    Outline: 2px solid rgb(19, 105, 232);
+    border: none;
+    box-shadow:  2px 2px 2px 0px rgba(236, 236, 238, 0.32);
+  }
+  input[type="color"], input[type="color"]:focus, input[type="color"]:active {
+    background-color: transparent;
+    border: none;
+     Outline: none;
+    border: none;
+    box-shadow:  none;
+  }
+
+  input[type="color"]{
+    cursor: pointer;
+  }
+
+  textarea::-webkit-scrollbar {
+    width: 0.5em; /* Width of the scrollbar */
+    background-color: transparent; /* Background color of the scrollbar */
+  }
+  
+  textarea::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Color of the scrollbar thumb */
+    border-radius: 0.25em; /* Rounded corners of the thumb */
+  }
+
+  .containerButtonCreateAssignment {
+    position: relative;
+  }
