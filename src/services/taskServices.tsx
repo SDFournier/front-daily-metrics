@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Task, TaskContext } from '../context/tasksContext';
+import { Task } from '../context/tasksContext';
 
 /////CREATE task in DB/////
 export const createTask = (taskToAdd: Task): Promise<Task> => {

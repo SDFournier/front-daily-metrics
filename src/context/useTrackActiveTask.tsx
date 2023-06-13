@@ -1,12 +1,12 @@
-import { createContext, useEffect, useState, useContext } from 'react';
+/*import { createContext, useEffect, useState, useContext } from 'react';
 import { useReducer } from 'react';
 import { Task,TaskContext } from './tasksContext';
-
+*/
 export interface ActiveTask {
-    id: string;
-    name: string;
-    color: string
-    /*
+  id: string;
+  name: string;
+  color: string;
+  /*
     creator: string;
     description: string;
     assignment: string;
